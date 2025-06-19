@@ -12,3 +12,11 @@ def count_characters(contents):
             chars[character] += 1
     return chars
 
+def split_dict(chars):
+    results = []
+    for char in chars:
+        new_dict = {"char": char, "num": chars[char]}
+        results.append(chars[char])
+    pass
+    
+
