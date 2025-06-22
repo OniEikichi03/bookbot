@@ -12,11 +12,19 @@ def count_characters(contents):
             chars[character] += 1
     return chars
 
+def sort_on(item):
+    return item["num"]
+
 def split_dict(chars):
     results = []
     for char in chars:
-        new_dict = {"char": char, "num": chars[char]}
-        results.append(chars[char])
-    pass
+        if char.isalpha():
+            new_dict = {"char": char, "num": chars[char]}
+            results.append(new_dict)
+    results.sort(reverse=True, key=sort_on)
+    return results
+
+
+
     
 
